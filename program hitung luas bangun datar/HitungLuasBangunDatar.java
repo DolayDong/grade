@@ -65,7 +65,7 @@ public class HitungLuasBangunDatar {
                     ;
                 }
             } catch (Exception e) {
-                System.out.println("Harap Masukkan Angka pilihan !!hanya angka!!");
+                System.out.println("Harap Masukkan Angka!! hanya angka!!");
 
             }
         }
