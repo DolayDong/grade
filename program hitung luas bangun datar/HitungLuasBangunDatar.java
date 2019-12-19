@@ -43,7 +43,7 @@ public class HitungLuasBangunDatar {
                     break;
                 }
                 if (input == 5) {
-                     System.out.println("Akhir Program");
+                    System.out.println("Akhir Program");
                 } else {
                     System.out.print("Hitung Bangun lain? : [y/n]");
                     Scanner hitungLagi = new Scanner(System.in);
@@ -72,6 +72,9 @@ public class HitungLuasBangunDatar {
 }
 
 class BangunDatar {
+    double sisi, r, luasLingkaran, Alas, Tinggi, luasSegitiga, panjang, lebar, luasPersegiPanjang;
+    final double pi = 3.14;
+    double luasLingkaran = pi * r * r;
 
     void hitungPersegi() {
         Scanner inputSisi = new Scanner(System.in);
@@ -79,7 +82,7 @@ class BangunDatar {
         System.out.println();
         System.out.println("Rumus : sisi x sisi");
         System.out.print("Masukkan panjang sisi : ");
-        double sisi = inputSisi.nextDouble();
+        sisi = inputSisi.nextDouble();
         System.out.println("Luas Persegi dengan sisi " + sisi + " = " + sisi * sisi);
         System.out.println();
     }
@@ -90,9 +93,9 @@ class BangunDatar {
         System.out.println();
         System.out.println("Rumus : pi x r x r");
         System.out.print("Masukkan Jari-jari : ");
-        double r = inputR.nextDouble();
-        final double pi = 3.14;
-        double luasLingkaran = pi * r * r;
+        r = inputR.nextDouble();
+        pi = 3.14;
+        luasLingkaran = pi * r * r;
         System.out.println("Luas lingkaran dengan jari-jari " + r + " adalah " + luasLingkaran);
         System.out.println();
     }
@@ -105,10 +108,10 @@ class BangunDatar {
         System.out.println();
         System.out.println("Rumus : Alas x Tinggi / 2");
         System.out.print("Masukkan Alas :");
-        double Alas = inputAlas.nextDouble();
+        Alas = inputAlas.nextDouble();
         System.out.print("Masukkan Tinggi :");
-        double Tinggi = inputTinggi.nextDouble();
-        double luasSegitiga = Alas * Tinggi / 2;
+        Tinggi = inputTinggi.nextDouble();
+        luasSegitiga = Alas * Tinggi / 2;
         System.out.println("Luas Segitiga dengan Alas " + Alas + " dan tinggi " + Tinggi + " Adalah " + luasSegitiga);
         System.out.println();
     }
@@ -121,13 +124,13 @@ class BangunDatar {
         System.out.println();
         System.out.println("Rumus : Panjang x lebar");
         System.out.print("Masukkan panjang Bangun : ");
-        double panjang = inputPanjang.nextDouble();
+        panjang = inputPanjang.nextDouble();
         System.out.print("Masukkan lebar Bangun : ");
-        double lebar = inputLebar.nextDouble();
-        double luasPersegiPanjang = lebar * panjang;
+        lebar = inputLebar.nextDouble();
+        luasPersegiPanjang = lebar * panjang;
         System.out.println(
-                "Luas persegi dengan Panjang " + panjang + " dan Lebar " + lebar + " Adalah " + luasPersegiPanjang );
-                System.out.println();
+                "Luas persegi dengan Panjang " + panjang + " dan Lebar " + lebar + " Adalah " + luasPersegiPanjang);
+        System.out.println();
     }
 
 }
