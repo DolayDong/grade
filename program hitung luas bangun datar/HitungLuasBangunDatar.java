@@ -54,11 +54,13 @@ public class HitungLuasBangunDatar {
                         lagi = false;
                         System.out.println("Terimakasih telah menggunakan Program Kami. .");
                     } else {
+                        do {
+                            System.out.println("Harap masukkan string");
+                            System.out.print("Hitung lagi? : [y/n]");
 
-                        System.out.println("Harap masukkan string");
-                        System.out.print("Hitung lagi? : [y/n]");
-                        Scanner hitungLagi2 = new Scanner(System.in);
-                        String hitung2 = hitungLagi.nextLine();
+                            Scanner hitungLagi2 = new Scanner(System.in);
+                            String hitung2 = hitungLagi.nextLine();
+                        } while (hitung2 != "n" || hitung2 != "y");
 
                     }
                     ;
