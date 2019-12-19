@@ -74,7 +74,6 @@ public class HitungLuasBangunDatar {
 class BangunDatar {
     double sisi, r, luasLingkaran, Alas, Tinggi, luasSegitiga, panjang, lebar, luasPersegiPanjang;
     final double pi = 3.14;
-    double luasLingkaran = pi * r * r;
 
     void hitungPersegi() {
         Scanner inputSisi = new Scanner(System.in);
@@ -94,7 +93,6 @@ class BangunDatar {
         System.out.println("Rumus : pi x r x r");
         System.out.print("Masukkan Jari-jari : ");
         r = inputR.nextDouble();
-        pi = 3.14;
         luasLingkaran = pi * r * r;
         System.out.println("Luas lingkaran dengan jari-jari " + r + " adalah " + luasLingkaran);
         System.out.println();
