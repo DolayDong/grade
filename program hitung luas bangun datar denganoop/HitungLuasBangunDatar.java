@@ -3,21 +3,92 @@ import java.util.Scanner;
 public class HitungLuasBangunDatar {
 
     public static void main(String[] args) {
-        try{
-        Persegi Persegi = new Persegi();
-        Persegi.hitungLuas();
-        Persegi.hitungKeliling();
-        Lingkaran lingkaran = new Lingkaran();
-        lingkaran.hitungLuas();
-        lingkaran.hitungKeliling();
-        Segitiga segitiga = new Segitiga();
-        segitiga.hitungLuas();
-        segitiga.hitungKeliling();
-        PersegiPanjang persegipanjang = new PersegiPanjang();
-        persegipanjang.hitungLuas();
-        persegipanjang.hitungKeliling();
-        } catch (Exception e){
+        Scanner inputUser = new Scanner(System.in);
+        Scanner ulangProgram = new Scanner(System.in);
+        String lagi;
+        boolean ulang = true;
+
+        try {
+            do {
+                System.out.println("PROGRAM HITUNG LUAS DAN KELILING BANGUN DATAR");
+                System.out.println("1. Persegi");
+                System.out.println("2. Lingkaran");
+                System.out.println("3. Segitiga");
+                System.out.println("4. Persegi Panjang");
+                System.out.println("5. Exit");
+                System.out.print("Pilih bangun ");
+                int pilihan = inputUser.nextInt();
+
+                switch (pilihan) {
+                case 1:
+                    Persegi Persegi = new Persegi();
+                    Persegi.hitungLuas();
+                    Persegi.hitungKeliling();
+                    System.out.print("Hitung lagi? [y/n] : ");
+                    lagi = ulangProgram.nextLine();
+                    if (lagi.equalsIgnoreCase("y")) {
+                        ulang = true;
+                    } else if (lagi.equalsIgnoreCase("n")) {
+                        System.out.println("Terimakasih sudah mampir");
+                        ulang = false;
+                    } else {
+                        System.out.println("Harap masukkan huruf!");
+                    }
+                    break;
+                case 2:
+                    Lingkaran lingkaran = new Lingkaran();
+                    lingkaran.hitungLuas();
+                    lingkaran.hitungKeliling();
+                    System.out.print("Hitung lagi? [y/n] : ");
+                    lagi = ulangProgram.nextLine();
+                    if (lagi.equalsIgnoreCase("y")) {
+                        ulang = true;
+                    } else if (lagi.equalsIgnoreCase("n")) {
+                        System.out.println("Terimakasih sudah mampir");
+                        ulang = false;
+                    } else {
+                        System.out.println("Harap masukkan huruf!");
+                    }
+                    break;
+                case 3:
+                    Segitiga segitiga = new Segitiga();
+                    segitiga.hitungLuas();
+                    segitiga.hitungKeliling();
+                    System.out.print("Hitung lagi?[y/n] : ");
+                    lagi = ulangProgram.nextLine();
+                    if (lagi.equalsIgnoreCase("y")) {
+                        ulang = true;
+                    } else if (lagi.equalsIgnoreCase("n")) {
+                        System.out.println("Terimakasih sudah mampir");
+                        ulang = false;
+                    } else {
+                        System.out.println("Harap masukkan huruf!");
+                    }
+                    break;
+                case 4:
+                    PersegiPanjang persegipanjang = new PersegiPanjang();
+                    persegipanjang.hitungLuas();
+                    persegipanjang.hitungKeliling();
+                    System.out.print("Hitung lagi? [y/n] : ");
+                    lagi = ulangProgram.nextLine();
+                    if (lagi.equalsIgnoreCase("y")) {
+                        ulang = true;
+                    } else if (lagi.equalsIgnoreCase("n")) {
+                        System.out.println("Terimakasih sudah mampir");
+                        ulang = false;
+                    } else {
+                        System.out.println("Harap masukkan huruf!");
+                    }
+                    break;
+                case 5:
+                    System.out.println("Terimakasih sudah mampir");
+                    ulang = false;
+
+                }
+            } while (ulang);
+        } catch (Exception e) {
             System.out.println("Yang anda masukkan bukan angka !!");
+
         }
 
     }
